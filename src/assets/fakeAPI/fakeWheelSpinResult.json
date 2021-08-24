@@ -1,0 +1,8 @@
+{
+    "randomNumber": 61,
+    "reward" : {
+        "rewardRarity": 2, 
+        "item": { "itemId" : 32001, "slots": 0, "isTradable": true}, 
+        "amount": 100
+    }
+}

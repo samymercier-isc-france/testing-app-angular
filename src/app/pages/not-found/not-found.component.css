@@ -1,0 +1,24 @@
+div{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+img{
+    position: absolute;
+    overflow: hidden;
+    width: 75vw;
+    height: 75vh;
+}
+
+h1 {
+    z-index: 2;
+}
+
+button {
+    z-index:2;
+}

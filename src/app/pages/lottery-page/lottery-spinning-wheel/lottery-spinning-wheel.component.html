@@ -1,0 +1,20 @@
+
+<div id="wheel-container">
+    <img id="pointer" src="../../../../assets/triangle.png">
+    <img id="wheel" [@spinningWheel]="{value: isSpinning, params:{rotation_number: rotation}}"  src="../../../../assets/wheel.png.png">
+    <button (click)="onSpin()" [disabled]="isSpinning==='spin'? true : false">
+        {{isSpinning==='spin'? 'WAIT...' : 'SPIN ( -' + spinningCost +' aurum)'}}
+    </button>
+</div>
+
+<div id="hide-background" *ngIf="this.winningMessage != ''"></div>
+
+<div id="winning-screen"  *ngIf="this.winningMessage != ''">
+    <img class="aurum top left" src="../../../../assets/aurum.png" *ngIf="this.winningItem.rewardRarity === 4 || this.winningItem.rewardRarity === 3">
+    <img class="aurum top right" src="../../../../assets/aurum.png" *ngIf="this.winningItem.rewardRarity === 4 || this.winningItem.rewardRarity === 2">
+    <img class="aurum bottom left" src="../../../../assets/aurum.png" *ngIf="this.winningItem.rewardRarity === 4 || this.winningItem.rewardRarity === 2">
+    <img class="aurum bottom right" src="../../../../assets/aurum.png" *ngIf="this.winningItem.rewardRarity === 4 || this.winningItem.rewardRarity === 3">
+    <img class="aurum" src="../../../../assets/aurum.png" *ngIf="this.winningItem.rewardRarity === 4 || this.winningItem.rewardRarity === 1">
+    <h1>{{this.winningMessage}}</h1>
+    <button (click)="resetWheel()">OK</button>
+</div>
